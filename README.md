@@ -73,7 +73,9 @@ ID:5	"R "	"Madhav   "	144.54000000000002
     order by total desc
     limit 1
 
+
 ****************************************************************************************************************************************************************************************
+
 
 ## Question set two - Modrate
 
@@ -122,6 +124,7 @@ Question 3 - Return all the track names that have a song length longer than the 
 Return the Name and Milliseconds for each track. Order by the song length with the longest songs listed first.
 
 Ans = "name"	"milliseconds"
+
 "Occupation / Precipice"	5286953
 "Through a Looking Glass"	5088838
 "Greetings from Earth, Pt. 1"	2960293
@@ -136,16 +139,20 @@ Ans = "name"	"milliseconds"
     from track)
 	order by milliseconds desc;
 
+
+****************************************************************************************************************************************************************************************
+
+
 ## Question set Three - Advance
 
 Question 1 - Find how much amount spent by each customer on artists? Write a query to return customer name, artist name and total spent?
 
 Ans = "customer_id"	"first_name"	"last_name"	"artist_name"	"amount_spent"
-46	"Hugh                                              "	"O'Reilly                                          "	"Queen"	27.719999999999985
-38	"Niklas                                            "	"Schröder                                          "	"Queen"	18.81
-3	"François                                          "	"Tremblay                                          "	"Queen"	17.82
+46	"Hugh            "	"O'Reilly             "	"Queen"	          27.719999999999985
+38	"Niklas          "	"Schröder             "	"Queen"	          18.81
+3	"François        "	"Tremblay             "	"Queen"	          17.82
 
-
+["Since the unit price can vary, we multiplied the unit by the quantity to get the correct total sales for each line item]
 
 
     WITH best_selling_artist AS (
