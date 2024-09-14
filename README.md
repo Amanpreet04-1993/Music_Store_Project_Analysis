@@ -1,4 +1,6 @@
 # SQL_Project_Music_Store_Analysis
+![SQL](https://img.shields.io/badge/SQL-003B57?style=flat&logo=sqlite&logoColor=white)
+
 
 SQL project to analyze online music store data (Postgre SQL Server)
 ![PNG](https://github.com/user-attachments/assets/5a185087-bb14-47d4-9819-ff451ecdb1ee)
