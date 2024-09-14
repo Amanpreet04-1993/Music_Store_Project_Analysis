@@ -94,6 +94,44 @@ Ans - "aaronmitchell@yahoo.ca"	"Aaron  "	"Mitchell "
       )
       order by email;
 
+Question 2 - Let's invite the artists who have written the most rock music in our dataset. 
+Write a query that returns the Artist name and total track count of the top 10 rock bands.
+
+Ans -  "Artistid"   "Name"   "No of songs"
+"22"	"Led Zeppelin"	114
+"150"	"U2"	112
+"58"	"Deep Purple"	92
+"90"	"Iron Maiden"	81
+"118"	"Pearl Jam"	54
+"152"	"Van Halen"	52
+"51"	"Queen"	45
+"142"	"The Rolling Stones"	41
+"76"	"Creedence Clearwater Revival"	40
+
+    SELECT artist.artist_id, artist.name,COUNT(artist.artist_id) AS number_of_songs
+    FROM track
+    JOIN album ON album.album_id = track.album_id
+    JOIN artist ON artist.artist_id = album.artist_id
+    JOIN genre ON genre.genre_id = track.genre_id
+    WHERE genre.name LIKE 'Rock'
+    GROUP BY artist.artist_id
+    ORDER BY number_of_songs DESC
+    LIMIT 10;
+  
+Question 3 - Return all the track names that have a song length longer than the average song length. 
+Return the Name and Milliseconds for each track. Order by the song length with the longest songs listed first.
+
+Ans  "name"	"milliseconds"
+"Occupation / Precipice"	5286953
+"Through a Looking Glass"	5088838
+"Greetings from Earth, Pt. 1"	2960293
+"The Man With Nine Lives"	2956998
+"Battlestar Galactica, Pt. 2"	2956081
 
 
-
+    select name, milliseconds
+    from track
+    where milliseconds > 
+    (select avg (milliseconds) as avg_track_length
+    from track)
+	order by milliseconds desc;
