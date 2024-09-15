@@ -1,4 +1,4 @@
-# SQL_Project_Music_Store_Analysis
+# Project_Music_Store_Analysis
 ![SQL](https://img.shields.io/badge/SQL-003B57?style=flat&logo=sqlite&logoColor=white)
 
 
